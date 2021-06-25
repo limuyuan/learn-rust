@@ -7,6 +7,7 @@ fn main() {
     //x = 6;
     //println!("The value of x is: {}", x);
     let spaces = "   ";
-    let spaces = spaces.len();
+    //let spaces = spaces.len();
+    spaces = spaces.len();
     println!("{}", spaces);
 }
