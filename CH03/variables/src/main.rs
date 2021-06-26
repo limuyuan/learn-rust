@@ -6,7 +6,7 @@ fn main() {
     println!("The value of x is: {}", x);
     //x = 6;
     //println!("The value of x is: {}", x);
-    let mut spaces = "   ";
+    let spaces = "   ";
     //let spaces = spaces.len();
     let spaces = spaces.len();
     println!("{}", spaces);
