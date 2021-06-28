@@ -10,4 +10,9 @@ fn main() {
     //let spaces = spaces.len();
     let spaces = spaces.len();
     println!("{}", spaces);
+
+    let c = 'z';
+    let z = 'ℤ';
+    let heart_eyed_cat = '😻';
+    println!("heart_eyed_cat = {}", heart_eyed_cat);
 }
