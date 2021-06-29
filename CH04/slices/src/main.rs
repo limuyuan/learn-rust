@@ -2,7 +2,7 @@ fn main() {
     println!("Hello, world!");
 
     let word = String::from("one two");
-    println!("The first word of '{}' is {}.", word, first_word(&word));
+    println!("The index of first space in word '{}' is {}.", word, first_word(&word));
 }
 
 fn first_word(s: &String) -> usize {
