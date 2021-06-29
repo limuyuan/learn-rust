@@ -7,12 +7,18 @@ fn main() {
 
 
         let mut s = String::from("hello");
-        // do stuff with s
-    
+        // do stuff with 
         s.push_str(", world!"); // push_str() appends a literal to a String
         
+       
         println!("the value of s in scope is: {}", s);
-    
+        takes_ownership(s);
+
+        let mut x = 5;
+
+        makes_copy(x);
+
+        println!("the value of x after copy is: {}", x);
     
     }                      // this scope is now over, and s is no longer valid
 
@@ -38,4 +44,13 @@ fn clone_string() {
 
     println!("s1 = {}, s2 = {}", s1, s2);
     println!("x = {}, y = {}", x, y);
+}
+
+fn takes_ownership(some_string: String) { 
+    println!("{}", some_string);
+}
+
+fn makes_copy(mut some_integer: i32) {
+    some_integer += 1;
+    println!("{}", some_integer);
 }
