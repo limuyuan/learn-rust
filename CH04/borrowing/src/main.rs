@@ -1,19 +1,31 @@
 fn main() {
-      let s1 = gives_ownership();
+    let s1 = gives_ownership();
 
-      let s2 = String::from("hello");
+    let s2 = String::from("hello");
 
-      let mut s3 = takes_and_gives_back(s2);
+    let mut s3 = takes_and_gives_back(s2);
 
-      let (s4, len) = calculate_length(s1);
+    let (mut s4, len) = calculate_length(s1);
 
-      println!("The length of '{}' is {}.", s4, len);
+    println!("The length of '{}' is {}.", s4, len);
 
-      change(&mut s3);
+    let mut p1 = &mut s3;
+    //let mut p2 = &mut s3;
 
-      let s3_len = calculate_length_only(&s3);
+    change(&mut p1);
+    //change(&mut p2);
 
-      println!("The length of '{}' is {}.", s3, s3_len);
+    let s3_len = calculate_length_only(&s3);
+
+    println!("The length of '{}' is {}.", s3, s3_len);
+
+    println!("s4 = {}", s4);
+    
+    let r1 = &s4;
+    let r2 = &s4;
+    let r3 = &mut s4;
+
+    println!("r1 = {}, r2 = {}, r3 = {}", r1, r2, r3);
 }
 
 fn gives_ownership() -> String {
