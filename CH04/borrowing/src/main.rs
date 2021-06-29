@@ -23,9 +23,10 @@ fn main() {
     
     let r1 = &s4;
     let r2 = &s4;
-    let r3 = &mut s4;
+    println!("r1 = {}, r2 = {}", r1, r2);
 
-    println!("r1 = {}, r2 = {}, r3 = {}", r1, r2, r3);
+    let r3 = &mut s4;
+    println!("r3 = {}", r3);
 }
 
 fn gives_ownership() -> String {
