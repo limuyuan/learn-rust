@@ -9,9 +9,9 @@ fn main() {
 
       println!("The length of '{}' is {}.", s4, len);
 
-      let s2_len = calculate_length_only(s2);
+      let s3_len = calculate_length_only(&s3);
 
-      println!("The length of '{}' is {}.", s2, s2_len);
+      println!("The length of '{}' is {}.", s3, s3_len);
 }
 
 fn gives_ownership() -> String {
@@ -29,7 +29,7 @@ fn calculate_length(s: String) -> (String, usize) {
     (s, length)
 }
 
-fn calculate_length_only(s: String) -> usize {
+fn calculate_length_only(s: &String) -> usize {
     let length = s.len();
     length
 }
