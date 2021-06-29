@@ -17,12 +17,20 @@ fn main() {
     }                      // this scope is now over, and s is no longer valid
 
     //println!("the value of s after curly bracket is: {}", s);
-    code_under_f4_3();
+    //code_under_f4_3();
+    clone_string();
 }
 
 fn code_under_f4_3 () {
     let s1 = String::from("hello");
-    let s2 = s1;
+    //let s2 = s1; move s1 to s2 here
 
     println!("{}, world!", s1);
+}
+
+fn clone_string() {
+    let s1 = String::from("hello");
+    let s2 = s1.clone();
+
+    println!("s1 = {}, s2 = {}", s1, s2);
 }
