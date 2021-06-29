@@ -27,6 +27,8 @@ fn main() {
 
     let r3 = &mut s4;
     println!("r3 = {}", r3);
+
+    let reference_to_nothing = dangle();
 }
 
 fn gives_ownership() -> String {
@@ -52,3 +54,9 @@ fn calculate_length_only(s: &String) -> usize {
 fn change(some_string: &mut String) {
     some_string.push_str(", world");
 }
+
+fn dangle() -> &String {
+    let s = String::from("hello");
+    &s
+}
+
