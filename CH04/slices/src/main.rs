@@ -1,8 +1,13 @@
 fn main() {
     println!("Hello, world!");
 
-    let word = String::from("one two");
-    println!("The index of first space in word '{}' is {}.", word, first_word(&word));
+    let mut word = String::from("one two");
+
+    let index = first_word(&word);
+    
+    word.clear();
+
+    println!("The index of first space in word '{}' is {}.", word, index);
 }
 
 fn first_word(s: &String) -> usize {
