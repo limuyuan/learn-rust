@@ -5,6 +5,17 @@ fn main() {
 
     let index = first_word(&word);
     
+    let one = &word[0..3];
+    let two = &word[4..];
+
+    let chinese = String::from("测试");
+
+    let cn1 = &chinese[0..2];
+
+    println!("{}, {}", one, two);
+
+    println!("{}", cn1);
+    
     word.clear();
 
     println!("The index of first space in word '{}' is {}.", word, index);
