@@ -1,8 +1,7 @@
-#[allow(unused_mut)]
 fn main() {
     println!("Hello, world!");
 
-    let mut word = String::from("test case");
+    let word = String::from("test case");
 
     let index = first_word_index(&word);
     
@@ -17,11 +16,13 @@ fn main() {
 
     println!("{}", cn1);
     
+    let first = first_word(&word[..]);
+
     //word.clear();
 
     println!("The index of first space in word '{}' is {}.", word, index);
 
-    println!("The first word is: {}", first_word(&word));
+    println!("The first word is: {}", first);
 
     println!("The second word is: {}", second_word(&word));
 }
@@ -39,7 +40,7 @@ fn first_word_index(s: &String) -> usize {
     s.len()
 }
 
-fn first_word(s: &String) -> &str {
+fn first_word(s: &str) -> &str {
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {
