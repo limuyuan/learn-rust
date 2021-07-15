@@ -16,7 +16,7 @@ fn main() {
 
     println!("{}", cn1);
     
-    let first = first_word(&word[..]);
+    let first = first_word(&word);
 
     //word.clear();
 
