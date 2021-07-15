@@ -25,7 +25,14 @@ fn main() {
 
     let color = Color(255, 255, 255);
 
-    println!("{}", color.0); 
+    println!("{}", color.0);
+
+    let user4 = NewUser {
+        email: "someone@example.com",
+        username: "someusername123",
+        active: true,
+        sign_in_count: 1,
+    };
 }
 
 struct User {
@@ -45,3 +52,11 @@ fn build_user(email: String, username: String) -> User {
 }
 
 struct Color(i32, i32, i32);
+
+struct NewUser {
+    username: &str,
+    email: &str,
+    sign_in_count: u64,
+    active: bool,
+
+}
