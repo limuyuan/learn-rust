@@ -25,6 +25,11 @@ fn main() {
     println!("The first word is: {}", first);
 
     println!("The second word is: {}", second_word(&word));
+
+
+    let a = [1, 2, 3, 4, 5];
+    let slice = &a[1..3];
+    assert_eq!(slice, [2, 3]);
 }
 
 fn first_word_index(s: &String) -> usize {
