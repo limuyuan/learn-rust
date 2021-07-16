@@ -9,7 +9,7 @@ fn main() {
         height: 50,
     };
 
-    println!("The area of the rectangle is {} square pixels.", area_by_struct(struct_rect1));
+    println!("The area of the rectangle is {} square pixels.", area_by_struct(&struct_rect1));
 
 }
 
@@ -21,7 +21,7 @@ fn area_by_tuples(dimensions: (u32, u32)) -> u32 {
     dimensions.0 * dimensions.1
 }
 
-fn area_by_struct(rectangle: Rectangle) -> u32 {
+fn area_by_struct(rectangle: &Rectangle) -> u32 {
     rectangle.width * rectangle.height
 }
 
