@@ -16,8 +16,7 @@ fn main() {
 
     let user3 = User {
         username: String::from("user3"),
-        email: String::from("user3@3.com"), 
-        ..user2
+        ..user2.clone()
     };
 
     println!("user3's username = {}", user3.username);
@@ -26,15 +25,17 @@ fn main() {
     let color = Color(255, 255, 255);
 
     println!("{}", color.0);
-
+    
+    /*
     let user4 = NewUser {
         email: "someone@example.com",
         username: "someusername123",
         active: true,
         sign_in_count: 1,
-    };
+    };*/
 }
 
+#[derive(Clone)]
 struct User {
     username: String,
     email: String,
@@ -53,10 +54,11 @@ fn build_user(email: String, username: String) -> User {
 
 struct Color(i32, i32, i32);
 
+/*
 struct NewUser {
     username: &str,
     email: &str,
     sign_in_count: u64,
     active: bool,
 
-}
+}*/
