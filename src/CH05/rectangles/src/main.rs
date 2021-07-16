@@ -2,7 +2,7 @@ fn main() {
     let width1 = 30;
     let height1 = 50;
 
-    let rect11 = (30, 50);
+    let rect1 = (30, 50);
 
     let struct_rect1 = Rectangle {
         width: 30,
@@ -11,6 +11,7 @@ fn main() {
 
     println!("The area of the rectangle is {} square pixels.", area_by_struct(&struct_rect1));
 
+    println!("rect1  = {:#?}", struct_rect1);
 }
 
 fn area(width: u32, height: u32) -> u32 {
@@ -25,6 +26,7 @@ fn area_by_struct(rectangle: &Rectangle) -> u32 {
     rectangle.width * rectangle.height
 }
 
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32,
