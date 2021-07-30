@@ -21,7 +21,10 @@ fn value_in_cents(coin: Coin) -> u8 {
         Coin::Nickel => 5,
         Coin::Dime => 10,
         Coin::Quarter(no_matter_what_the_variant_name_is) => {
-            println!("State quarter from {:?}!", no_matter_what_the_variant_name_is);
+            println!(
+                "State quarter from {:?}!",
+                no_matter_what_the_variant_name_is
+            );
             25
         }
     }
@@ -42,7 +45,6 @@ fn main() {
     let test = plus_one_int(some_number);
     let test2 = plus_one(some_number);
 
-    
     //let sum = another_number / some_number;
     println!("5+1={}", plus_one_int(some_number));
     println!("None=0, so None+1={}", plus_one_int(absent_number));
@@ -53,8 +55,6 @@ fn main() {
     println!("{:?}", return_string(a_string));
     //String have ownership
     //println!("{:?}", return_string(a_string));
-
-
 }
 
 fn plus_one_int(i: Option<i32>) -> i32 {
