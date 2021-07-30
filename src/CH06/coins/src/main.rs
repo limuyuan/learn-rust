@@ -20,8 +20,8 @@ fn value_in_cents(coin: Coin) -> u8 {
         }
         Coin::Nickel => 5,
         Coin::Dime => 10,
-        Coin::Quarter(UsState) => {
-            println!("State quarter from {:?}!", UsState);
+        Coin::Quarter(no_matter_what_the_variant_name_is) => {
+            println!("State quarter from {:?}!", no_matter_what_the_variant_name_is);
             25
         }
     }
@@ -67,7 +67,7 @@ fn plus_one_int(i: Option<i32>) -> i32 {
 fn plus_one(i: Option<i32>) -> Option<i32> {
     match i {
         None => None,
-        Some(i) => Some(i + 1),
+        Some(wtf) => Some(wtf + 1),
     }
 }
 
