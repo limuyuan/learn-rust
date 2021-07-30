@@ -1,3 +1,4 @@
+#[derive(Debug)]
 enum Coin {
     Penny,
     Nickel,
@@ -33,7 +34,8 @@ fn value_in_cents(coin: Coin) -> u8 {
 fn main() {
     let quarter: Coin = Coin::Quarter(UsState::Alabama);
     println!("A Quarter is {} cents.", value_in_cents(quarter));
-
+    
+    //println!("{:?}", quarter);
     
     let coin = Coin::Penny;
     let oklahoma_quarter = Coin::Quarter(UsState::Oklahoma);
@@ -86,6 +88,7 @@ fn main() {
     };
     if let some_u8_value = Some(3u8) {
         // print "Three!"
+        // assert_eq!(some_u8_value, Some(3u8));
         println!("Three!");
     };
 
