@@ -34,6 +34,19 @@ fn main() {
     let quarter: Coin = Coin::Quarter(UsState::Alabama);
     println!("A Quarter is {} cents.", value_in_cents(quarter));
 
+    
+    let coin = Coin::Penny;
+    let oklahoma_quarter = Coin::Quarter(UsState::Oklahoma);
+    let mut count = 0;
+
+    if let Coin::Quarter(state) = oklahoma_quarter {
+        println!("State quarter from {:?}!", state);
+    } else {
+        count += 1;
+    }
+
+    println!("count = {}", count);
+
     // introduce `Option<T>`
     let some_number: Option<i32> = Some(5);
     let another_number: Option<i32> = Some(6);
@@ -56,8 +69,8 @@ fn main() {
     //String have ownership
     //println!("{:?}", return_string(a_string));
 
-    let some_u8_value = 9u8;
-    match some_u8_value {
+    let u8_value = 9u8;
+    match u8_value {
         1 => println!("one"),
         3 => println!("three"),
         5 => println!("five"),
@@ -65,6 +78,17 @@ fn main() {
         9 => println!("nine"),
         _ => (),
     }
+
+    let some_u8_value = Some(0u8);
+    if let Some(3u8) = some_u8_value {
+        // print nothing
+        println!("Three!");
+    };
+    if let some_u8_value = Some(3u8) {
+        // print "Three!"
+        println!("Three!");
+    };
+
 }
 
 fn plus_one_int(i: Option<i32>) -> i32 {
