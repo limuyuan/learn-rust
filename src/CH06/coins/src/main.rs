@@ -55,6 +55,16 @@ fn main() {
     println!("{:?}", return_string(a_string));
     //String have ownership
     //println!("{:?}", return_string(a_string));
+
+    let some_u8_value = 9u8;
+    match some_u8_value {
+        1 => println!("one"),
+        3 => println!("three"),
+        5 => println!("five"),
+        7 => println!("seven"),
+        9 => println!("nine"),
+        _ => (),
+    }
 }
 
 fn plus_one_int(i: Option<i32>) -> i32 {
