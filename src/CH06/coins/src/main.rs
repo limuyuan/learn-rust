@@ -34,9 +34,9 @@ fn value_in_cents(coin: Coin) -> u8 {
 fn main() {
     let quarter: Coin = Coin::Quarter(UsState::Alabama);
     println!("A Quarter is {} cents.", value_in_cents(quarter));
-    
+
     //println!("{:?}", quarter);
-    
+
     let coin = Coin::Penny;
     let oklahoma_quarter = Coin::Quarter(UsState::Oklahoma);
     let mut count = 0;
@@ -91,7 +91,6 @@ fn main() {
         // assert_eq!(some_u8_value, Some(3u8));
         println!("Three!");
     };
-
 }
 
 fn plus_one_int(i: Option<i32>) -> i32 {
