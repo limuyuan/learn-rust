@@ -14,7 +14,12 @@ mod front_of_house {
     }
 }
 
+use front_of_house::hosting::add_to_waitlist;
+use crate::front_of_house::hosting;
+
 pub fn eat_at_restaurant() {
+    hosting::add_to_waitlist();
+
     // Absolute path
     crate::front_of_house::hosting::add_to_waitlist();
 
@@ -62,4 +67,24 @@ mod back_of_house {
     }
 
     fn cook_order() {}
+}
+
+use std::fmt::Result;
+use std::io::Result as IoResult;
+
+fn function1() -> Result {
+    // --snip--
+    Ok(())
+}
+
+fn function2() -> IoResult<()> {
+    // --snip--
+    Ok(())
+}
+
+use std::collections::HashMap;
+
+fn test_hashmap() {
+    let mut map = HashMap::new();
+    map.insert(1, 2);
 }
