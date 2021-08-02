@@ -26,7 +26,7 @@ pub fn eat_at_restaurant() {
 
     // change our mind about what bread we'd like
     meal.toast = String::from("Wheat");
-    
+
     println!("I'd like {} toast, please", meal.toast);
 
     // seasonal_fruit is a private field
@@ -50,7 +50,7 @@ mod back_of_house {
             }
         }
     }
-    
+
     pub enum Appetizer {
         Soup,
         Salad,
