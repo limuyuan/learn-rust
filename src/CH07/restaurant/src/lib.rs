@@ -14,8 +14,8 @@ mod front_of_house {
     }
 }
 
-use front_of_house::hosting::add_to_waitlist;
 use crate::front_of_house::hosting;
+use front_of_house::hosting::add_to_waitlist;
 
 pub fn eat_at_restaurant() {
     hosting::add_to_waitlist();
