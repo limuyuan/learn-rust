@@ -10,16 +10,37 @@ fn main() {
     let s = String::from("initial contents");
 
     let hello = String::from("السلام عليكم");
+    println!("length of {} is {}.", &hello, hello.len());
+
     let hello = String::from("Dobrý den");
+    println!("length of {} is {}.", &hello, hello.len());
+
     let hello = String::from("Hello");
+    println!("length of {} is {}.", &hello, hello.len());
+
     let hello = String::from("שָׁלוֹם");
+    println!("length of {} is {}.", &hello, hello.len());
+
     let hello = String::from("नमस्ते");
+    println!("length of {} is {}.", &hello, hello.len());
+
     let hello = String::from("こんにちは");
+    println!("length of {} is {}.", &hello, hello.len());
+
     let hello = String::from("안녕하세요");
+    println!("length of {} is {}.", &hello, hello.len());
+
     let hello = String::from("你好");
+    println!("length of {} is {}.", &hello, hello.len());
+
     let hello = String::from("Olá");
+    println!("length of {} is {}.", &hello, hello.len());
+
     let hello = String::from("Здравствуйте");
+    println!("length of {} is {}.", &hello, hello.len());
+
     let hello = String::from("Hola");
+    println!("length of {} is {}.", &hello, hello.len());
 
     let mut s1 = String::from("foo");
     let s2 = "bar";
@@ -45,4 +66,7 @@ fn main() {
 
     println!("{}", c2);
     println!("{}{}{}", s1, s2, s3); //format! won't take ownership!
+
+    let s1 = String::from("Hello");
+    //let h = s1[0];
 }
