@@ -11,7 +11,7 @@ fn main() {
         loop {
             match number.trim().parse() {
                 Ok(num) => {
-                    println!("Celcius = {}", f_to_c(num));
+                    println!("Celcius = {:.2}", f_to_c(num));
                     break;
                 }
                 Err(_) => {
@@ -27,7 +27,7 @@ fn main() {
         loop {
             match number.trim().parse() {
                 Ok(num) => {
-                    println!("Fahrenheit = {}", c_to_f(num));
+                    println!("Fahrenheit = {:.2}", c_to_f(num));
                     break;
                 }
                 Err(_) => {
@@ -52,10 +52,10 @@ fn cf_selector() -> String {
 
         if cf == "C" || cf == "c" {
             println!("You have chosen Celsius!");
-            break "C".to_string();
+            break String::from("C");
         } else if cf == "F" || cf == "f" {
             println!("You have chosen Fahrenheit!");
-            break "F".to_string();
+            break String::from("F");
         } else {
             println!("Please input a valid letter!");
         }
@@ -63,7 +63,7 @@ fn cf_selector() -> String {
 }
 
 fn c_to_f(cel: f64) -> f64 {
-    32.0 + cel * 18.0
+    32.0 + cel * 1.8
 }
 
 fn f_to_c(fahr: f64) -> f64 {
