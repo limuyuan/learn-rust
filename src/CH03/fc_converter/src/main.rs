@@ -9,10 +9,7 @@ fn main() {
         io::stdin().read_line(&mut number).expect("Failed to read!");
 
         loop {
-            let _number: f64 = match number
-                .trim() //is there a way to parse and do not need to declare a new variable?
-                .parse()
-            {
+            match number.trim().parse() {
                 Ok(num) => {
                     println!("Celcius = {}", f_to_c(num));
                     break;
@@ -28,7 +25,7 @@ fn main() {
         io::stdin().read_line(&mut number).expect("Failed to read!");
 
         loop {
-            let _number: f64 = match number.trim().parse() {
+            match number.trim().parse() {
                 Ok(num) => {
                     println!("Fahrenheit = {}", c_to_f(num));
                     break;
