@@ -11,6 +11,9 @@ fn main() {
 
     let hello = String::from("السلام عليكم");
     println!("length of {} is {}.", &hello, hello.len());
+    for h in hello.bytes() {
+        println!("{}", h);
+    }
 
     let hello = String::from("Dobrý den");
     println!("length of {} is {}.", &hello, hello.len());
@@ -23,6 +26,10 @@ fn main() {
 
     let hello = String::from("नमस्ते");
     println!("length of {} is {}.", &hello, hello.len());
+    for h in hello.chars() {
+        println!("{}", h);
+    }
+
 
     let hello = String::from("こんにちは");
     println!("length of {} is {}.", &hello, hello.len());
@@ -38,6 +45,7 @@ fn main() {
 
     let hello = String::from("Здравствуйте");
     println!("length of {} is {}.", &hello, hello.len());
+    println!("{}", &hello[8..12]);
 
     let hello = String::from("Hola");
     println!("length of {} is {}.", &hello, hello.len());
