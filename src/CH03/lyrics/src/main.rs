@@ -11,7 +11,7 @@ fn main() {
         "Five gold rings",
         "Six geese a-laying",
         "Seven swans a-swimminng",
-        "Eigh maids a-milking",
+        "Eight maids a-milking",
         "Nine ladies dancing",
         "Ten lords a-leaping",
         "Eleven pipers piping",
