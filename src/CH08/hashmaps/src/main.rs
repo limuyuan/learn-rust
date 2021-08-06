@@ -6,6 +6,15 @@ fn main() {
     scores.insert(String::from("Blue"), 50);
     scores.insert(String::from("Yellow"), 30);
 
+    // overwriting a value
+    scores.insert(String::from("Yellow"), 35);
+
+    // check before update
+    println!("{:#?}", scores.entry(String::from("Blue")));
+    println!("{:#?}", scores.entry(String::from("Orange")));
+    scores.entry(String::from("Blue")).or_insert(60);
+    scores.entry(String::from("Orange")).or_insert(60);
+
     let teams = vec![String::from("Blue"), String::from("Yellow")];
     let initial_score = vec![20, 10];
 
@@ -27,4 +36,14 @@ fn main() {
     for (key, value) in scores {
         println!("{}: {}", key, value);
     }
+
+    let text = "hello hello world world wolrd test";
+    let mut map = HashMap::new();
+
+    for word in text.split_whitespace() {
+        let count = map.entry(word).or_insert(0);
+        *count += 1;
+    }
+
+    println!("{:?}", map);
 }
