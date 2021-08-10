@@ -1,8 +1,6 @@
 use std::{collections::HashMap, io};
 
 fn main() {
-    println!("Hello, world!");
-
     let mut company: HashMap<String, String> = HashMap::new();
 
     loop {
@@ -15,12 +13,6 @@ fn main() {
             .expect("Failed to read line!");
 
         let input_vec: Vec<&str> = input.trim().split(" ").collect();
-
-        //for s in &input_vec {
-        //println!("{}", s);
-        //}
-
-        // println!("input_vec[0]{}", input_vec[0]);
 
         if input_vec[0] == "Add" && input_vec.len() == 4 && input_vec[2] == "to" {
             company.insert(String::from(input_vec[1]), String::from(input_vec[3]));
@@ -35,7 +27,5 @@ fn main() {
         } else {
             println!("Invalid input: {}", input.trim());
         }
-
-        // println!("company hashmap: {:#?}", company);
     }
 }
