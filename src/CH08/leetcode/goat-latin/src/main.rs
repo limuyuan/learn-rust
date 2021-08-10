@@ -6,7 +6,8 @@ fn main() {
 }
 
 impl Solution {
-    // TODO: unfinished
+    // TODO: unfinished, cannot understand concept of deref and don't know why method `push_str()`
+    // cannot be used here
     pub fn to_goat_latin(sentence: String) -> String {
         let v: Vec<&str> = sentence.split(" ").collect();
 
