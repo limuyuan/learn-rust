@@ -1,5 +1,5 @@
 [package]
-name = "exercise1"
+name = "mean-median-mode"
 version = "0.1.0"
 edition = "2018"
 
