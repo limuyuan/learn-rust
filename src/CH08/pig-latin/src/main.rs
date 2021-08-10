@@ -6,7 +6,7 @@ fn main() {
 fn pig_latin(s: &str) -> String {
     let mut return_str = String::from(s);
     match &s[0..1] {
-        "a"|"e"|"i"|"o"|"u" => {
+        "a" | "e" | "i" | "o" | "u" => {
             return_str.push_str("-hay");
         }
         first_letter => {
