@@ -1,3 +1,5 @@
+// from leetcode: https://leetcode-cn.com/problems/goat-latin/
+
 fn main() {
     let mut test_case = Solution {
         sentence: String::from("test"),
